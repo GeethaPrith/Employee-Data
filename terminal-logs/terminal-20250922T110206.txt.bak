@@ -1,0 +1,49 @@
+Timestamp: 
+PWD: /Users/geethaselvaraj/Desktop/EmpData/emp
+User: geethaselvaraj
+Host: Geethas-MacBook-Air.local
+UNAME: Darwin Geethas-MacBook-Air.local 24.5.0 Darwin Kernel Version 24.5.0: Tue Apr 22 19:48:46 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T8103 arm64
+Node version: v22.17.0
+NPM version: 10.9.2
+Git status:
+## master
+ M angular.json
+ M package-lock.json
+ M package.json
+ M src/app/app.component.html
+ M src/app/app.component.scss
+ M src/app/app.component.ts
+ M src/app/app.config.ts
+ M src/app/app.routes.ts
+ M src/index.html
+ M src/styles.scss
+?? src/app/auth/
+?? src/app/driver/
+?? src/app/emp-list/
+?? src/app/environment/
+?? src/app/fbcard/
+?? src/app/models/
+?? src/app/new-emp/
+?? src/app/not-found/
+?? src/app/pages/
+?? src/app/popup/
+?? src/app/services/
+?? terminal-logs/
+
+Last 200 shell history lines:
+ 1233  git commit "Added new files"
+ 1234  git commit -m "Added new files"
+ 1235  git push origin devlop
+ 1236  git add
+ 1237  git add .
+ 1238  git add .
+ 1239  git commit -m "Added new features"
+ 1240  git push origin main
+ 1241  git init
+ 1242  git remote add origin https://github.com/GeethaPrith/Frontend-Mentor-Figma.git
+ 1243  git add .
+ 1244  git commit -m "First Commit"
+ 1245  git push origin main
+ 1246  git branch -M main
+ 1247  git remote add origin https://github.com/GeethaPrith/Frontend-Mentor-Figma.git
+ 1248  git push -u origin main
