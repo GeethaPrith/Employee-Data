@@ -1,0 +1,113 @@
+/* filepath: /Users/geethaselvaraj/Desktop/EmpData/emp/src/app/driver/driver.component.scss */
+
+/* General form styling */
+form {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.col {
+  flex: 1;
+  min-width: 200px;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+td button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+td button:hover {
+  opacity: 0.9;
+}
+
+td button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+td button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    min-width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

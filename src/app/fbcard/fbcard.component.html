@@ -1,0 +1,32 @@
+@if(isRefreshing){
+  <div class="overlay">
+    <mat-spinner></mat-spinner>
+    <p>Refreshing...</p>
+  </div>
+}
+<!-- <div class="overlay" *ngIf="isRefreshing"></div> -->
+<div class="card-header">
+  <button mat-raised-button color="primary" (click)="openRefreshPopup()">Open Refresh Popup</button>
+  <div class="card-container" [attr.inert]="isRefreshing ? '' : null">
+    @for(data of cardData; track data.id){
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{data.firstName}} {{data.lastName}}</mat-card-title>
+        <mat-card-subtitle>{{data.userName}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="data.image" alt="Post Image">
+      <mat-card-content>
+        <p>
+          {{data.email}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="like(data)">LIKE</button>
+        <span>{{data.likes}} Likes</span>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+    }
+  </div>
+</div>

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FbcardComponent } from './fbcard/fbcard.component';
+import { AuthComponent } from './auth/auth.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterLink,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

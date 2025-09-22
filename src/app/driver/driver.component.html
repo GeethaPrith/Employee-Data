@@ -1,0 +1,64 @@
+@if(showForm){
+<form [formGroup]="driverForm">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="email" formControlName="email">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="License number" formControlName="licenseNumber">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="PhoneNumber" formControlName="phoneNumber">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="DOB" formControlName="dob">
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </div>
+        <div>
+            <button class="btn btn-secondary" (click)="toggleView()">
+                {{ showForm ? 'View Table' : 'Add Driver' }}
+            </button>
+        </div>
+    </div>
+</form>
+} 
+@if(!showForm){
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th> Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>License Number</th>
+            <th>DOB</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(driver of drivers(); track $index)
+        {
+        <tr>
+            <td>{{$index + 1}}</td>
+            <td>{{driver.name}}</td>
+            <td>{{driver.email}}</td>
+            <td>{{driver.phoneNumber}}</td>
+            <td>{{driver.licenseNumber}}</td>
+            <td>{{driver.dob}}</td>
+
+            <td>
+                <button (click)="editDriver(driver)">Edit</button>
+                <button (click)="deleteDriver(driver.id)">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}

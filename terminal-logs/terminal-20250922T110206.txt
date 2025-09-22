@@ -1,0 +1,32 @@
+Timestamp: 
+PWD: /Users/[REDACTED_USER]/Desktop/EmpData/emp
+User: [REDACTED_USER]
+Host: [REDACTED_HOST]
+UNAME: Darwin [REDACTED_HOST] 24.5.0 Darwin Kernel Version 24.5.0: Tue Apr 22 19:48:46 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T8103 arm64
+Node version: v22.17.0
+NPM version: 10.9.2
+Git status:
+## master
+ M angular.json
+ M package-lock.json
+ M package.json
+ M src/app/app.component.html
+ M src/app/app.component.scss
+ M src/app/app.component.ts
+ M src/app/app.config.ts
+ M src/app/app.routes.ts
+ M src/index.html
+ M src/styles.scss
+?? src/app/auth/
+?? src/app/driver/
+?? src/app/emp-list/
+?? src/app/environment/
+?? src/app/fbcard/
+?? src/app/models/
+?? src/app/new-emp/
+?? src/app/not-found/
+?? src/app/pages/
+?? src/app/popup/
+?? src/app/services/
+?? terminal-logs/
+

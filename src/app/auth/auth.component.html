@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="toogle-button">
+        <!-- Toggle Buttons -->
+        <button id="login-toogle" class="toogle-button" (click)="changeView('Login')"
+          [ngClass]="activeForm === 'Login' ? 'active' : ''">Login</button>
+        <button id="signUp-toogle" class="toogle-button" (click)="changeView('SignUp')"
+          [ngClass]="activeForm === 'SignUp' ? 'active' : ''">Sign Up</button>
+        <div class="slider" [ngClass]="activeForm === 'Login' ? 'loginAnimation' : 'signUpAnimation'"></div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <!-- Login Form -->
+      @if(activeForm === 'Login'){
+      <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <h2>Welcome Back</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="userName" placeholder="User Name" />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      }
+
+      <!-- Sign Up Form -->
+      @if(activeForm === 'SignUp'){
+      <form [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
+        <h2>Create Account</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="userName" placeholder="User Name" />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" formControlName="email" placeholder="Email" />
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" formControlName="agreeToTerms" />
+            I Agree to the <span>Terms of Service</span> and <span>Privacy Policy</span>
+          </label>
+          @if(signUpForm.get('agreeToTerms')?.invalid && signUpForm.get('agreeToTerms')?.touched){
+          <div class="error-message">
+            You must agree to the terms and conditions.
+            </div>
+          }
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      }
+    </div>
+  </div>
+</div>
